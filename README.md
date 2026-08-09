@@ -214,10 +214,13 @@ Disconnect when you are done.
 
 ## Before you put up an antenna
 
-`434.5000 MHz` is a placeholder. **An unattended transmitter needs a coordinated
-channel.** In Sweden that goes through SSA's frequency coordinator, and PTS's
-regulations govern unattended operation and identification. Your country will
-have its own equivalent.
+`434.5000 MHz` is a placeholder, not a recommendation.
+
+**You are responsible for operating on a frequency you are licensed and
+permitted to use in your own country.** Rules for unattended and remotely
+controlled stations vary, and many countries require the channel to be
+coordinated first. Check with your national society or regulator before you
+connect an antenna.
 
 Keep the dummy load on until that is sorted.
 
