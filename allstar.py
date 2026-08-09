@@ -1137,7 +1137,7 @@ PANEL_HTML = """<!doctype html><html lang="sv"><head><meta charset="utf-8">
   <div class="links" id="links"><span class="none">Checking&hellip;</span></div>
   <div class="row" style="margin-top:14px">
     <div class="f" style="margin:0"><label class="lbl" for="target">Connect to node</label>
-      <input id="target" inputmode="numeric" placeholder="29510"></div>
+      <input id="target" inputmode="numeric" placeholder="55553"></div>
   </div>
   <div style="display:flex;gap:9px;margin-top:11px;flex-wrap:wrap">
     <button type="button" onclick="link('connect')">Connect</button>
@@ -2465,5 +2465,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-
 
