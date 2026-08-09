@@ -15,6 +15,13 @@ applies the same work to AllStarLink.
 **By SA7BNB.** Runs on [AllStarLink 3](https://github.com/AllStarLink/ASL3),
 which does the linking — this software connects the HRI-200 to it.
 
+![The Allstar-HRI-200 web panel: frequency readout with RX, TX, bridge and
+link indicators, and cards for radio settings, node identity, audio levels
+and links](image.png)
+
+Everything is configured from this page — node number, callsign, frequency,
+power, audio levels and links. No `asl-menu`, no editing config files by hand.
+
 ---
 
 ## What you need
