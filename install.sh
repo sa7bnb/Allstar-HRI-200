@@ -30,7 +30,7 @@
 # Tested on Raspberry Pi OS Lite 64-bit (Debian 13 trixie) on a Pi 4.
 #
 # The node keys a real transmitter as soon as it starts. USE A DUMMY LOAD
-# until you have a coordinated frequency.
+# until you have a frequency you are licensed and permitted to use.
 
 set -euo pipefail
 
@@ -151,7 +151,7 @@ fi
 
 if [[ "$FULL_UPGRADE" == "yes" && "$INSTALL_ASL" == "yes" ]]; then
     run apt-get update -qq
-    echo "    upgrading the system, this takes a while on a Pi..."
+    echo "    upgrading the system, this takes 20-40 minutes on a Pi..."
     apt-get -y -qq full-upgrade
     ok "system upgraded"
 
@@ -208,7 +208,7 @@ else
     run apt-get update -qq
     ok "repository added"
 
-    echo "    installing asl3, several minutes..."
+    echo "    Installing ASL3 takes quite a while—expect it to take anywhere from 40 to 60 minutes....."
     # DAHDI does not build against kernel 6.18 (del_timer_sync was renamed
     # to timer_delete_sync), and on ASL3 3.9.x app_rpt does not need it -
     # Asterisk gets its timing from res_timing_timerfd. Let the install
@@ -366,8 +366,8 @@ poll_interval = 0.2
 # power and tone have to be set on the radio.
 model = ftm400d
 
-# A placeholder. An unattended transmitter needs a coordinated channel -
-# in Sweden, through SSA's frequency coordinator.
+# A placeholder, not a recommendation. You are responsible for operating on
+# a frequency you are licensed and permitted to use in your own country.
 frequency = $FREQ
 mode = fm            ; fm | digital
 narrow = no
@@ -742,7 +742,8 @@ Two things the panel cannot do for you:
   2. ${B}Forward UDP 4569${N} to this machine in your router, or nobody can
      reach your node from outside. Never forward port $WEB_PORT.
 
-Test against a ${B}dummy load${N} until your frequency is coordinated.
+Test against a ${B}dummy load${N} until you have a frequency you are licensed
+and permitted to use for an unattended station in your country.
 
   Logs:      journalctl -u allstar -f
   Chain:     sudo systemctl stop allstar
